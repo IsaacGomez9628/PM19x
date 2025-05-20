@@ -12,6 +12,4 @@ const {
   edad,
   direccion: { ciudad, pais },
 } = persona;
-console.log(
-  `Me llaman ${nombre}, tengo ${edad} años y vivo en ${ciudad}, ${pais}`
-);
+console.log(`Me llaman ${nombre}, tengo ${edad} años y vivo en ${ciudad}`);

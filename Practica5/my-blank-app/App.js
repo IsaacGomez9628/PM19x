@@ -1,30 +1,53 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Button } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
+import { Button } from "react-native-web";
+import React, { useState } from "react";
+
+const Texto = ({ style }) => {
+  const [contenido, setContenido] = useState("Hola Mundo");
+  const actualizarTexto = () => {
+    setContenido("State Modificado");
+  };
+  return (
+    <Text style={[styles.text, style]} onPress={actualizarTexto}>
+      {" "}
+      {contenido}{" "}
+    </Text>
+  );
+};
 
 export default function App() {
-  const Texto = () => {
-    return <Text>Hola mundo desde react</Text>;
+  const [contenido, setContenido] = useState("Aque no me tocas");
+  const actualizarBoton = () => {
+    setContenido("Aplastado");
   };
-
   return (
     <View style={styles.container}>
-      {/* el componente view */}
-
-      {/* Texto es donde podemos cambiar el texto */}
-      <Text>Open up App.js to start working on your app!</Text>
-      <Texto />
-      {/* StatusBar es donde se muestra la bateria, notificacionex, etc, todo lo que esta en la parte superior de un celular */}
       <StatusBar style="auto" />
-      <Button title="Presioname" />
+      <Texto style={styles.rojo}></Texto>
+      <Texto style={styles.verde}></Texto>
+      <Texto style={styles.amarillo}></Texto>
+      <Button onPress={actualizarBoton} title={contenido}></Button>
     </View>
   );
 }
-
+//3,Estilos
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#000",
     alignItems: "center",
     justifyContent: "center",
+    justifyContent: "space-evenly",
+    flexDirection: "column",
   },
+  text: {
+    color: "white",
+    fontSize: 28,
+    width: 100,
+    height: 100,
+  },
+  rojo: { backgroundColor: "red" },
+  amarillo: { backgroundColor: "yellow" },
+  verde: { backgroundColor: "green" },
 });

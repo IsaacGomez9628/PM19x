@@ -31,13 +31,12 @@ export default function App() {
     </View>
   );
 }
-//3,Estilos
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#000",
     alignItems: "center",
-    justifyContent: "center",
     justifyContent: "space-evenly",
     flexDirection: "column",
   },

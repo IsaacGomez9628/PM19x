@@ -1,0 +1,38 @@
+# Node dependencies
+node_modules/
+
+# Expo/React Native generated folders
+.expo/
+.expo-shared/
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+
+# OS-specific
+Thumbs.db
+
+# Android/iOS build folders (si los usas)
+android/
+ios/
+
+# Bundles
+*.bundle
+
+# VS Code settings
+.vscode/
+
+# Ignore asset binaries (opcional)
+assets/**/*.mp4
+assets/**/*.mov
+assets/**/*.zip
+assets/**/*.psd
+assets/**/*.exe
+assets/**/*.apk
+assets/**/*.ipa
+
+# Ignore env/local config files
+.env
+.env.local
